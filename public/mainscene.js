@@ -2,13 +2,6 @@
 /**
  * メイン
  */
-function like (type) {
-      const url = `/like?image=${type}`
-      $.get(url)
-        .fail(function () {
-          alert('failed to like.')
-        })
-    }
 phina.define('MainScene', {
   superClass: 'DisplayScene',
 
@@ -180,7 +173,7 @@ phina.define('MainScene', {
         unitIcon.fireEffect();
         SoundManager.play('ring');
         this.reaction(m, "perfect");
-        like('A');
+        like('D');
         return true;
       }
       if (delta <= RATING_TABLE["great"].range) {
