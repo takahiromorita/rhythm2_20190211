@@ -180,6 +180,7 @@ phina.define('MainScene', {
         unitIcon.fireEffect();
         SoundManager.play('ring');
         this.reaction(m, "perfect");
+        like('A');
         return true;
       }
       if (delta <= RATING_TABLE["great"].range) {
