@@ -80,5 +80,42 @@
     });
   </script>
 -->
+
+  <!-- <script src="../phina.js/build/phina.js"></script> -->
+  <script src='https://cdn.rawgit.com/phi-jp/phina.js/v0.2.1/build/phina.js'></script>
+
+  <script type="text/javascript">
+    'use strict';
+    if (!phina.util.Support.webAudio) {
+      alert('webAudioに対応していません！最新のブラウザを使って下さい！');
+    }
+    // IE対策
+    // var ua = phina.global.navigator.userAgent;
+    // if (ua.indexOf('Trident') > 0) {
+    //   alert('インターネットエクスプローラーには対応してません！');
+    // }
+    phina.globalize();
+  </script>
+  <script src="./config.js"></script>
+  <script src="./components.js"></script>
+  <script src="./mainscene.js"></script>
+  <script src="./titlescene.js"></script>
+
+  <script type="text/javascript">
+    phina.main(function() {
+      var app = GameApp({
+        assets: ASSETS,
+        width: SCREEN_WIDTH,
+        height: SCREEN_HEIGHT,
+        startLabel: 'title',
+        backgroundColor: '#8BF5FF',
+        title: 'スクフィナ',
+        fps: 60,
+      });
+      // app.enableStats();
+      app.run();
+    });
+  </script>
+
 </body>
 </html>
