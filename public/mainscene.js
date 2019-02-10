@@ -2,6 +2,13 @@
 /**
  * メイン
  */
+function like (type) {
+      const url = `/like?image=${type}`
+      $.get(url)
+        .fail(function () {
+          alert('failed to like.')
+        })
+    }
 phina.define('MainScene', {
   superClass: 'DisplayScene',
 
