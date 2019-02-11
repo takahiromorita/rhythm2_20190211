@@ -173,7 +173,7 @@ phina.define('MainScene', {
         unitIcon.fireEffect();
         SoundManager.play('ring');
         this.reaction(m, "perfect");
-        like('D');
+        like(myid);
         console.log(myid);
         return true;
       }
