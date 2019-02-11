@@ -87,15 +87,15 @@ app.get('/like', function (req, res) {
   console.log("/IP:" + getIP(req) +'/like: ' + JSON.stringify(msg))
   switch ( JSON.stringify(msg) )
 {
-    case '{"image":"A"}' : a++;
+    case '{"image":"A"}' : a[1]++;
      break;
-    case '{"image":"B"}' : b++;
+    case '{"image":"B"}' : b[1]++;
      break;
-    case '{"image":"C"}' : c++;
+    case '{"image":"C"}' : c[1]++;
      break;
-    case '{"image":"D"}' : d++;
+    case '{"image":"D"}' : d[1]++;
      break;
-    case '{"image":"Reset"}' : a=b=c=d=0;
+    case '{"image":"Reset"}' : a[1]=b[1]=c[1]=d[1]=0;
      break;
     default:
      console.log("etc")
