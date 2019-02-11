@@ -104,7 +104,7 @@ app.get('/like', function (req, res) {
   var stamp_cnt = [[a[1]],[b[1]],[c[1]],[d[1]]]
   io.emit('like', msg)
   io.emit('chart', stamp_cnt)
-  io.emit('', stamp_cnt)
+  io.emit('score', stamp_cnt)
   console.log(stamp_cnt)
   res.end()
 })
