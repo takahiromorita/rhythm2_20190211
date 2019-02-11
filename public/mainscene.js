@@ -174,6 +174,7 @@ phina.define('MainScene', {
         SoundManager.play('ring');
         this.reaction(m, "perfect");
         like('D');
+        matching();
         return true;
       }
       if (delta <= RATING_TABLE["great"].range) {
