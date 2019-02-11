@@ -87,6 +87,21 @@
     });
   </script>
 -->
+  <body>
+    <p>スコアA:<span id="countA"></span></p>
+    <p>スコアB:<span id="countB"></span></p>
+    <p>スコアC:<span id="countC"></span></p>
+    <p>スコアD:<span id="countD"></span></p>
+    <script>
+      var bar_list = [[0],[0],[0],[0]];
+      var socket = io();
+      var $count = $('#countA');
+      socket.on('score', function(data) {
+          $count.text(data);
+          console.log(data);
+      });
+    </script>
+  </body>
   <!--<canvas id="phinaCanvas"></canvas>-->
 
   <div class="container2">
