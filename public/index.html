@@ -37,11 +37,10 @@
     }
     
     function matching() {
-      const url = `/matching`
-      $.get(url)
-        .fail(function () {
-          alert('failed to matching.')
-        })
+      return $.ajax({
+        type: 'GET',
+        url = `https://rhythm20190210.herokuapp.com/matching`
+      })
     }
   </script>
 </head>
