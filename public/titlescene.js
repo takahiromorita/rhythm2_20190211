@@ -10,7 +10,7 @@ phina.define('TitleScene', {
     this.backgroundColor = params.backgroundColor;
     
     matching().done(function(result) {
-      var myid = result;
+      myid = result;
       console.log(myid);
     }).fail(function(result) {
       console.log('error');
