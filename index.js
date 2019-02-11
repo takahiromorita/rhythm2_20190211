@@ -55,7 +55,7 @@ app.get("/chart", function(req, res){
 app.get("/matching", function(req, res){
   if (a[0] == '') {
     a[0] = getIP(req);
-    res.send('a');
+    res.send(a[0]);
   } else if (b[0] == '') {
     b[0] = getIP(req);
     res.send('b');
