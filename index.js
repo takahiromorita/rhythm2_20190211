@@ -1,4 +1,5 @@
 "use strict";
+const bodyParser = require('body-parser');
 const path = require('path');
 const express = require('express');
 const app = require('express')();
@@ -39,6 +40,7 @@ var b = ['',0]
 var c = ['',0]
 var d = ['',0]
 
+app.use(bodyParser.urlencoded({extended: true}))
 
 //入力側画面指定
 app.use("/controller",express.static(path.join(__dirname, 'public')))
