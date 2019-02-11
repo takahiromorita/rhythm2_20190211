@@ -30,10 +30,15 @@ var getIP = function (req) {
 require('date-utils') //現在時刻の取得に必要
 
 //選択肢
-var a = 0
-var b = 0
-var c = 0
-var d = 0
+//var a = 0
+//var b = 0
+//var c = 0
+//var d = 0
+var a = ['',0]
+var b = ['',0]
+var c = ['',0]
+var d = ['',0]
+
 
 //入力側画面指定
 app.use("/controller",express.static(path.join(__dirname, 'public')))
@@ -45,6 +50,23 @@ app.get("/display", function(req, res){
 //chart出力側画面指定
 app.get("/chart", function(req, res){
   res.sendFile(__dirname + '/index_chart.html');
+});
+//ID割当
+app.get("/matching", function(req, res){
+  if (a[0] == '') {
+    a[0] = getIP(req);
+    res.send('a');
+  } else if (b[0] == '') {
+    b[0] = getIP(req);
+    res.send('b');
+  } else if (c[0] == '') {
+    c[0] = getIP(req);
+    res.send('c');
+  } else if (d[0] == '') {
+    d[0] = getIP(req);
+    res.send('d');
+  } else {
+    res.send('no id');
 });
 
 app.get('/comment', function (req, res) {
