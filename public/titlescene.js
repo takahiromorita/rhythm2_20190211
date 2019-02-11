@@ -9,7 +9,7 @@ phina.define('TitleScene', {
     this.superInit(params);
     this.backgroundColor = params.backgroundColor;
     
-    console.log(matching('A'));
+    console.log(matching);
 
     // タイトルラベル
     Label({
