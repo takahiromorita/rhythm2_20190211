@@ -35,6 +35,14 @@
           alert('failed to like.')
         })
     }
+    
+    function matching () {
+      const url = `/matching`
+      $.get(url)
+        .fail(function () {
+          alert('failed to matching.')
+        })
+    }
   </script>
 </head>
 
@@ -120,6 +128,7 @@
       //let s = app.canvas.domElement.style;
       //s.width = "100%";
       //s.height = "auto";
+      matching();
       app.run();
     });
   </script>
