@@ -95,10 +95,16 @@
     <script>
       var bar_list = [[0],[0],[0],[0]];
       var socket = io();
-      var $count = $('#countA');
-      socket.on('score', function(data) {
-          $count.text(data);
-          console.log(data);
+      var $countA = $('#countA');
+      var $countB = $('#countB');
+      var $countC = $('#countC');
+      var $countD = $('#countD');
+      socket.on('score', function(cnt) {
+        $countA.text(cnt[0]);
+        $countB.text(cnt[1]);
+        $countC.text(cnt[2]);
+        $countD.text(cnt[3]);
+        console.log(cnt);
       });
     </script>
   </body>
