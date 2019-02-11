@@ -52,7 +52,8 @@ KEYCODE_TO_KEYDATA_MAP.forIn(function(key, val) {
 
 var ASSETS = {
   sound: {
-    music: "./assets/grandfather-clock.mp3",
+    //music: "./assets/grandfather-clock.mp3",
+    music: "./assets/【beatmania IIDX 24 SINOBUZ】Snakey Kung-fu.mp3",
     ring: "./assets/tamborine.mp3",
   },
   json: {
