@@ -8,6 +8,8 @@ phina.define('TitleScene', {
   init: function(params) {
     this.superInit(params);
     this.backgroundColor = params.backgroundColor;
+    
+    console.log(matching());
 
     // タイトルラベル
     Label({
