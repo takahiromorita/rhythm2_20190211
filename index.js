@@ -59,16 +59,16 @@ app.get('/matching', function(req, res){
     a[0] = getIP(req);
     console.log(a[0]);
     console.log('a');
-    res.send('a');
+    res.send('A');
   } else if (b[0] == '') {
     b[0] = getIP(req);
-    res.send('b');
+    res.send('B');
   } else if (c[0] == '') {
     c[0] = getIP(req);
-    res.send('c');
+    res.send('C');
   } else if (d[0] == '') {
     d[0] = getIP(req);
-    res.send('d');
+    res.send('D');
   } else {
     res.send('no id');
   }
