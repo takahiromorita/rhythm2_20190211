@@ -56,6 +56,7 @@ app.get('/matching', function(req, res){
   if (a[0] == '') {
     a[0] = getIP(req);
     console.log(a[0]);
+    console.log('a');
     res.send('a');
   } else if (b[0] == '') {
     b[0] = getIP(req);
