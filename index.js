@@ -52,7 +52,7 @@ app.get("/chart", function(req, res){
   res.sendFile(__dirname + '/index_chart.html');
 });
 //ID割当
-app.get("/matching", function(req, res){
+app.get('/matching', function(req, res){
   if (a[0] == '') {
     a[0] = getIP(req);
     res.send('a');
